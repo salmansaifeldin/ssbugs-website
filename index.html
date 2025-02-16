@@ -1,147 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SSBugs - Advanced Cybersecurity Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 10%;
-            background-color: #161b22;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo img {
-            width: 150px; /* تكبير حجم الشعار */
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #c9d1d9;
-            font-weight: 600;
-        }
-        nav a:hover {
-            color: #58a6ff;
-        }
-        .hero {
-            text-align: center;
-            padding: 100px 10%;
-            background-image: linear-gradient(to bottom, #161b22, #0d1117);
-            color: #f0f6fc;
-        }
-        .hero h1 {
-            font-size: 3.5em;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.5em;
-            margin-bottom: 40px;
-        }
-        .cta-button {
-            padding: 15px 40px;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #0d1117;
-            background-color: #58a6ff;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-        }
-        .cta-button:hover {
-            background-color: #1f6feb;
-        }
-        .cta-button-link {
-            text-decoration: none;
-            color: inherit;
-        }
-        section {
-            padding: 60px 10%;
-            text-align: center;
-        }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .service {
-            background-color: #161b22;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s;
-        }
-        .service:hover {
-            transform: translateY(-10px);
-        }
-        .service h3 {
-            color: #58a6ff;
-            margin-bottom: 15px;
-        }
-        .service p {
-            font-size: 1em;
-            line-height: 1.6;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #161b22;
-            color: #8b949e;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber Security Frontend</title>
+  <!-- خط Orbitron للمظهر المستقبلي -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <!-- مكتبة AOS للتحريك عند التمرير -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!-- ربط ملف CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- مكتبة Three.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GLTFLoader لتحميل النماذج ثلاثية الأبعاد -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/salmansaifeldin/ssbugs-website/refs/heads/main/0acb8a45-da89-4168-88fc-12246a944cfd.webp" alt="Company Logo"> <!-- استخدام الرابط المباشر للصورة -->
-        </div>
-        <nav>
-            <a href="mailto:salman@ssbugs.com">Contact</a>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Empowering Your Digital Security</h1>
-        <p>We provide cutting-edge cybersecurity solutions tailored to protect your assets and ensure your peace of mind.</p>
-        <a href="mailto:salman@ssbugs.com" class="cta-button-link">
-            <button class="cta-button">Discover More</button>
-        </a>
-    </section>
-    <section id="services">
-        <h2>Our Expertise</h2>
-        <div class="services">
-            <div class="service">
-                <h3>Web Application Security</h3>
-                <p>Guard your web platforms against advanced threats with robust measures, securing your applications from vulnerabilities like XSS, SQL Injection, and more.</p>
-            </div>
-            <div class="service">
-                <h3>Mobile App Protection</h3>
-                <p>Ensure mobile app safety with protection against data leaks, unauthorized access, and other security risks for a seamless user experience.</p>
-            </div>
-            <div class="service">
-                <h3>Desktop Software Defense</h3>
-                <p>Shield your desktop applications with comprehensive security assessments, closing potential gaps before they are exploited.</p>
-            </div>
-            <div class="service">
-                <h3>Comprehensive Penetration Testing</h3>
-                <p>Simulate real-world attack scenarios to discover vulnerabilities and fortify your systems with actionable insights.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        &copy; 2025 SSBugs. Building Trust in Cybersecurity.
-    </footer>
+  <!-- خلفية متحركة بتأثير التكبير -->
+  <div class="background-container"></div>
+
+  <!-- شريط التنقل -->
+  <header data-aos="fade-down">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Threats</a></li>
+        <li><a href="#">Security</a></li>
+        <li><a href="#">Solutions</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- محتوى الصفحة الرئيسي -->
+  <main>
+    <!-- تأثير الكتابة المتحركة -->
+    <h1 id="typing-effect"></h1>
+
+    <!-- واجهة المعلومات -->
+    <div id="ui-container">
+      <div class="info-panel glow-box" data-aos="fade-up">
+        <h2>Cyber Threat Security</h2>
+        <p>Advanced threat detection and prevention for digital environments.</p>
+      </div>
+      <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="200">
+        <h2>Cyber Digital Security</h2>
+        <p>Real-time monitoring and risk assessment for online assets.</p>
+      </div>
+      <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="400">
+        <h2>Mobile Security</h2>
+        <p>Protection against mobile cyber threats and vulnerabilities.</p>
+      </div>
+      <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="600">
+        <h2>Network Security</h2>
+        <p>Ensuring secure and encrypted communication networks.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- زر العودة للأعلى -->
+  <button id="scrollToTopBtn" title="Go to top">↑</button>
+
+  <!-- ربط ملف JavaScript -->
+  <script src="script.js"></script>
+  <!-- تفعيل AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 </html>
