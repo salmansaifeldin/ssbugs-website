@@ -1,0 +1,148 @@
+/* الإعدادات العامة */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: #000;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  
+  /* الخلفية المتحركة بتأثير التكبير */
+  @keyframes backgroundZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  
+  .background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/your-background-image.jpg') no-repeat center center/cover;
+    z-index: -1;
+    animation: backgroundZoom 10s infinite alternate ease-in-out;
+    filter: brightness(0.8);
+  }
+  
+  /* شريط التنقل */
+  header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 15px cyan;
+    text-align: center;
+    z-index: 10;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  nav ul li a {
+    color: cyan;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover {
+    background: cyan;
+    color: #000;
+    box-shadow: 0 0 10px cyan;
+  }
+  
+  /* تأثير الكتابة المتحركة */
+  #typing-effect {
+    font-size: 36px;
+    font-weight: bold;
+    color: cyan;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin-top: 80px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid cyan;
+  }
+  
+  /* واجهة المعلومات */
+  #ui-container {
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+  }
+  
+  .info-panel {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid cyan;
+    width: 220px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 0 10px cyan;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .info-panel:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px cyan;
+  }
+  
+  /* تأثير النيون المتحرك */
+  @keyframes neonGlow {
+    0% { box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan; }
+    50% { box-shadow: 0 0 10px cyan, 0 0 20px cyan, 0 0 30px cyan; }
+    100% { box-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan; }
+  }
+  
+  .glow-box {
+    animation: neonGlow 1.5s infinite alternate;
+  }
+  
+  /* زر العودة للأعلى */
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 255, 255, 0.8);
+    color: #000;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px cyan;
+    z-index: 10;
+  }
+  
+  #scrollToTopBtn:hover {
+    transform: scale(1.1);
+    background: cyan;
+  }
+  
+  #scrollToTopBtn.show {
+    opacity: 1;
+  }
