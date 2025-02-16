@@ -16,7 +16,7 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
-  <!-- خلفية متحركة بتأثير التكبير -->
+  <!-- خلفية متحركة بتأثير تكبير ديناميكي -->
   <div class="background-container"></div>
 
   <!-- شريط التنقل -->
@@ -25,7 +25,7 @@
       <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Threats</a></li>
-        <li><a href="#">Security</a></li>
+        <li><a href="#">Web Security</a></li>
         <li><a href="#">Solutions</a></li>
         <li><a href="#">About</a></li>
       </ul>
@@ -35,25 +35,25 @@
   <!-- محتوى الصفحة الرئيسي -->
   <main>
     <!-- تأثير الكتابة المتحركة -->
-    <h1 id="typing-effect"></h1>
+    <h1 id="typing-effect">Cyber Security & Web Protection</h1>
 
     <!-- واجهة المعلومات -->
     <div id="ui-container">
       <div class="info-panel glow-box" data-aos="fade-up">
-        <h2>Cyber Threat Security</h2>
-        <p>Advanced threat detection and prevention for digital environments.</p>
+        <h2>Web Security</h2>
+        <p>Comprehensive security solutions for web applications against attacks and vulnerabilities.</p>
       </div>
       <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="200">
-        <h2>Cyber Digital Security</h2>
-        <p>Real-time monitoring and risk assessment for online assets.</p>
+        <h2>Threat Detection</h2>
+        <p>Advanced techniques for identifying and mitigating cyber threats.</p>
       </div>
       <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="400">
         <h2>Mobile Security</h2>
-        <p>Protection against mobile cyber threats and vulnerabilities.</p>
+        <p>Protection against mobile-based cyber threats and malicious activities.</p>
       </div>
       <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="600">
         <h2>Network Security</h2>
-        <p>Ensuring secure and encrypted communication networks.</p>
+        <p>Ensuring encrypted and secure network communication against intrusions.</p>
       </div>
     </div>
   </main>
@@ -65,5 +65,8 @@
   <script src="script.js"></script>
   <!-- تفعيل AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
