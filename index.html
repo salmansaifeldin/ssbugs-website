@@ -4,22 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cyber Security Frontend</title>
-  <!-- خط Orbitron للمظهر المستقبلي -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
-  <!-- مكتبة AOS للتحريك عند التمرير -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-  <!-- ربط ملف CSS -->
   <link rel="stylesheet" href="styles.css">
-  <!-- مكتبة Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-  <!-- GLTFLoader لتحميل النماذج ثلاثية الأبعاد -->
-  <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
-  <!-- خلفية متحركة بتأثير تكبير ديناميكي -->
   <div class="background-container"></div>
 
-  <!-- شريط التنقل -->
   <header data-aos="fade-down">
     <nav>
       <ul>
@@ -32,41 +23,28 @@
     </nav>
   </header>
 
-  <!-- محتوى الصفحة الرئيسي -->
   <main>
-    <!-- تأثير الكتابة المتحركة -->
-    <h1 id="typing-effect">Cyber Security & Web Protection</h1>
+    <h1 id="typing-effect"></h1>
 
-    <!-- واجهة المعلومات -->
     <div id="ui-container">
       <div class="info-panel glow-box" data-aos="fade-up">
         <h2>Web Security</h2>
-        <p>Comprehensive security solutions for web applications against attacks and vulnerabilities.</p>
+        <p>Protecting websites from vulnerabilities like XSS, SQL Injection, and IDOR.</p>
       </div>
       <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="200">
-        <h2>Threat Detection</h2>
-        <p>Advanced techniques for identifying and mitigating cyber threats.</p>
+        <h2>Cyber Threat Security</h2>
+        <p>Advanced detection & prevention against digital threats.</p>
       </div>
       <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="400">
-        <h2>Mobile Security</h2>
-        <p>Protection against mobile-based cyber threats and malicious activities.</p>
-      </div>
-      <div class="info-panel glow-box" data-aos="fade-up" data-aos-delay="600">
         <h2>Network Security</h2>
-        <p>Ensuring encrypted and secure network communication against intrusions.</p>
+        <p>Securing and encrypting network communications.</p>
       </div>
     </div>
   </main>
 
-  <!-- زر العودة للأعلى -->
-  <button id="scrollToTopBtn" title="Go to top">↑</button>
+  <button id="scrollToTopBtn">↑</button>
 
-  <!-- ربط ملف JavaScript -->
-  <script src="script.js"></script>
-  <!-- تفعيل AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
