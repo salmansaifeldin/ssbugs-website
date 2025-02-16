@@ -1,8 +1,8 @@
 import React from 'react';
-import GlowingText from './components/GlowingText';
-import NeonGrid from './components/NeonGrid';
-import Pyramid from './components/Pyramid';
-import InfoPanels from './components/InfoPanels';
+import GlowingText from 'src/components/GlowingText';
+import NeonGrid from 'src/components/NeonGrid';
+import Pyramid from 'src/components/Pyramid';
+import InfoPanels from 'src/components/InfoPanels';
 
 function App() {
   return (
